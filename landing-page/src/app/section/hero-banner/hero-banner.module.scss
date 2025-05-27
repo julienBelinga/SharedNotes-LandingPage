@@ -1,0 +1,56 @@
+@use "variables" as *;
+.herobanner {
+  background: $background-color-body;
+  color: $text-color-light;
+  font-family: $font;
+  padding-left: 2em;
+  height: 100%;
+  position: relative;
+
+  .titleSharedNotes {
+    padding: 0 0 0 0;
+    font-size: 4.5rem;
+  }
+
+  .textHerobanner {
+    padding: 0 0 1rem 0;
+    font-size: 2rem;
+  }
+
+  .button {
+    padding: 18px 12px;
+    margin: 0 0 2em 1em;
+    border: none;
+    border-radius: 12px;
+    color: $background-color-body;
+  }
+
+  .button:hover {
+    background-color: $hover;
+    color: $text-color-light;
+  }
+
+  .model {
+    position: absolute; // ou 'fixed' selon le contexte, mais 'absolute' est recommandé ici
+    right: 0; // espace du bord droit, ajustez selon votre design
+    top: 15em; // centré verticalement, ajustez si besoin
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .phone1,
+  .phone2 {
+    position: absolute;
+    transition: transform 0.3s;
+  }
+
+  .phone1 {
+    z-index: 1;
+    //top: 0;
+  }
+  .phone2 {
+    z-index: 2;
+    //top: 0;
+  }
+}

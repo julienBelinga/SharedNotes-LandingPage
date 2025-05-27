@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/navbar/navbar";
 import { ReactNode } from "react";
+import "./globals.scss";
 
 export const metadata = {
   title: "Shared Notes",
