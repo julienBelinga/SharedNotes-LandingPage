@@ -6,21 +6,23 @@ import styles from "./hero-banner.module.scss";
 export default function Herobanner() {
   return (
     <section className={styles.herobanner}>
-      <h1 className={styles.titleSharedNotes}>Shared Notes</h1>
-      <div className={styles.textHerobanner}>
-        Partagez vos notes avec d’autre personne.
-      </div>
-      <div className={styles.divButtons}>
-        <button className={styles.button}>
-          Télécharger dans
-          <br />
-          l’App Store
-        </button>
-        <button className={styles.button}>
-          Télécharger sur
-          <br />
-          Google Play
-        </button>
+      <div>
+        <h1 className={styles.titleSharedNotes}>Shared Notes</h1>
+        <div className={styles.textHerobanner}>
+          Partagez vos notes avec d'autre personne.
+        </div>
+        <div className={styles.divButtons}>
+          <button className={styles.button}>
+            Télécharger dans
+            <br />
+            l'App Store
+          </button>
+          <button className={styles.button}>
+            Télécharger sur
+            <br />
+            Google Play
+          </button>
+        </div>
       </div>
       <div className={styles.model}>
         <Image
