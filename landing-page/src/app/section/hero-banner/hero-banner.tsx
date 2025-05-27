@@ -10,28 +10,29 @@ export default function Herobanner() {
       <div className={styles.textHerobanner}>
         Partagez vos notes avec d’autre personne.
       </div>
-      <button className={styles.button}>
-        Télécharger dans
-        <br />
-        l’App Store
-      </button>
-      <button className={styles.button}>
-        Télécharger sur
-        <br />
-        Google Play
-      </button>
+      <div className={styles.divButtons}>
+        <button className={styles.button}>
+          Télécharger dans
+          <br />
+          l’App Store
+        </button>
+        <button className={styles.button}>
+          Télécharger sur
+          <br />
+          Google Play
+        </button>
+      </div>
       <div className={styles.model}>
         <Image
           className={styles.phone1}
           src={phone1}
           alt="Maquette de téléphone 1"
-          height={450}
         />
-        {/* <Image 
+        <Image
           className={styles.phone2}
           src={phone2}
           alt="Maquette de téléphone 2"
-        />*/}
+        />
       </div>
     </section>
   );
