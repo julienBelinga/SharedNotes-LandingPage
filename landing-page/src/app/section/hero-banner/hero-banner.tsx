@@ -1,4 +1,6 @@
 import Image from "next/image";
+import AppStore from "assests/AppStore.png";
+import GooglePlay from "assests/GooglePlay.png";
 import phone1 from "assests/phone.png";
 import phone2 from "assests/phone.png";
 import styles from "./hero-banner.module.scss";
@@ -6,21 +8,27 @@ import styles from "./hero-banner.module.scss";
 export default function Herobanner() {
   return (
     <section className={styles.herobanner}>
-      <div>
+      <div className={styles.side}>
         <h1 className={styles.titleSharedNotes}>Shared Notes</h1>
         <div className={styles.textHerobanner}>
           Partagez vos notes avec d'autre personne.
         </div>
         <div className={styles.divButtons}>
           <button className={styles.button}>
-            Télécharger dans
-            <br />
-            l'App Store
+            <Image
+              className={styles.appstore}
+              src={AppStore}
+              alt="Logo App Atore"
+              width={50}
+            />
           </button>
           <button className={styles.button}>
-            Télécharger sur
-            <br />
-            Google Play
+            <Image
+              className={styles.appstore}
+              src={GooglePlay}
+              alt="Logo Google Play"
+              width={50}
+            />
           </button>
         </div>
       </div>

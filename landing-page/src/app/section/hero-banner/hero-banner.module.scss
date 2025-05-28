@@ -1,4 +1,5 @@
 @use "variables" as *;
+
 .herobanner {
   background: $background-color-body;
   color: $text-color-light;
@@ -9,14 +10,19 @@
   align-items: center;
   padding: 0 2em;
 
+  .side {
+    flex: 1 1 0;
+    min-width: 0; // Important pour éviter le débordement de texte
+  }
+
   .titleSharedNotes {
     padding: 0.5em 0 0 0;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
 
   .textHerobanner {
     padding: 0 0 1em 0;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .divButtons {
@@ -30,12 +36,13 @@
     font-size: 1.5rem;
     border: none;
     border-radius: 12px;
-    color: $background-color-body;
+    color: $text-color-light;
+    background-color: black;
+    width: 40%;
   }
 
   .button:hover {
     background-color: $hover;
-    color: $text-color-light;
   }
 
   .model {
@@ -44,36 +51,41 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    flex: 1 1 0;
+    min-width: 0;
+
+    top: 10em;
+    right: -4em;
   }
 
   .phone1 {
     position: absolute;
-    right: 150px;
-    height: 600px;
+    top: -4em;
+    right: 10em;
+    height: 650px;
     width: auto;
     z-index: 1;
   }
 
   .phone2 {
-    position: absolute;
-    right: 0;
-    height: 600px;
+    position: relative;
+    height: 650px;
     width: auto;
     z-index: 2;
   }
 }
 
-@media (max-width: 1300) {
+@media (max-width: 1300px) {
   .herobanner {
     .titleSharedNotes {
       margin-top: 60px;
       padding-top: 1em;
-      font-size: 3.5rem;
+      font-size: 4.5rem;
     }
 
     .textHerobanner {
       padding: 0 3em 1em 0;
-      font-size: 1.7rem;
+      font-size: 2.5rem;
     }
 
     .button {
@@ -83,53 +95,82 @@
 
     .phone1,
     .phone2 {
-      height: 550px;
+      height: 570px;
       width: auto;
+    }
+
+    .phone1 {
+      top: -1em;
+      right: 8.5em;
     }
   }
 }
 
-@media (max-width: 1100) {
+@media (max-width: 1050px) {
   .herobanner {
+    flex-direction: column;
     .titleSharedNotes {
-      font-size: 3rem;
+      font-size: 4.5rem;
     }
 
     .textHerobanner {
-      font-size: 1.5rem;
-    }
-
-    .divButtons {
-      display: flex;
-      flex-direction: column;
+      font-size: 2.5rem;
     }
 
     .button {
-      width: 40%;
+      width: 100%;
     }
 
     .model {
-      justify-content: flex-end;
-      align-items: center;
+      top: 6.5em;
+      right: -3.5em;
     }
 
     .phone1,
     .phone2 {
-      height: 450px;
+      height: 550px;
       width: auto;
+    }
+
+    .phone1 {
+      top: -3.5em;
+      right: 8em;
     }
   }
 }
 
 @media (max-width: 830px) {
   .herobanner {
-    .divButtons {
-      display: flex;
-      flex-direction: row;
+    .titleSharedNotes {
+      font-size: 4rem;
     }
 
+    .textHerobanner {
+      font-size: 2rem;
+    }
     .button {
       font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .herobanner {
+    .model {
+      right: 0em;
+    }
+
+    .phone1 {
+      //top: 6em;
+      right: 0em;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .herobanner {
+    .model {
+      right: -2em;
     }
   }
 }
