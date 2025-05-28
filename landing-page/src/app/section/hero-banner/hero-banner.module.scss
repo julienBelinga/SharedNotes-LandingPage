@@ -1,0 +1,230 @@
+@use "variables" as *;
+
+.herobanner {
+  background: $background-color-body;
+  color: $text-color-light;
+  font-family: $font;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+
+  .divTitleText {
+    flex: 1 1 0;
+    min-width: 0; // Important pour éviter le débordement de texte
+  }
+
+  .titleSharedNotes {
+    padding: 0.5em 0 0 0;
+    font-size: 5.5rem;
+  }
+
+  .textHerobanner {
+    padding: 0 0 1em 0;
+    font-size: 3rem;
+  }
+
+  .divButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .button {
+    padding: 30px 40px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    color: $text-color-light;
+    background-color: black;
+    width: 40%;
+  }
+
+  .button:hover {
+    background-color: $hover;
+  }
+
+  .model {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 0;
+    min-width: 0;
+
+    top: 10em;
+    right: -4em;
+  }
+  .phoneFrameContainer {
+    .phoneScreen1 {
+      position: absolute;
+      top: 1em;
+      right: 22em;
+      height: 550px;
+      width: 270px;
+      border-radius: 20px;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .phoneScreen2 {
+      position: absolute;
+      top: 3.5em;
+      right: 12em;
+      height: 550px;
+      width: 270px;
+      border-radius: 20px;
+      object-fit: cover;
+      z-index: 3;
+    }
+    .phoneFrame1 {
+      position: absolute;
+      top: -2em;
+      right: 10em;
+      height: 650px;
+      width: auto;
+      z-index: 2;
+    }
+    .phoneFrame2 {
+      position: relative;
+      top: 0em;
+      height: 650px;
+      width: auto;
+      z-index: 4;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .herobanner {
+    .titleSharedNotes {
+      margin-top: 60px;
+      padding-top: 1em;
+      font-size: 4.5rem;
+    }
+
+    .textHerobanner {
+      padding: 0 3em 1em 0;
+      font-size: 2.5rem;
+    }
+
+    .button {
+      padding: 20px 30px;
+      font-size: 1.3rem;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 570px;
+      width: auto;
+    }
+
+    .phoneFrame1 {
+      top: -1em;
+      right: 8.5em;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .herobanner {
+    flex-direction: column;
+    .titleSharedNotes {
+      font-size: 4.5rem;
+    }
+
+    .textHerobanner {
+      font-size: 2.5rem;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .model {
+      top: 6.5em;
+      right: -3.5em;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 550px;
+      width: auto;
+    }
+
+    .phoneFrame1 {
+      top: -4.5em;
+      right: 8em;
+    }
+
+    .phoneFrame2 {
+      top: 0em;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .herobanner {
+    .titleSharedNotes {
+      font-size: 4rem;
+    }
+
+    .textHerobanner {
+      font-size: 2rem;
+    }
+    .button {
+      font-size: 1.1rem;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 400px;
+      width: auto;
+    }
+
+    .phoneFrame1 {
+      top: -2.5em;
+      right: 5.5em;
+    }
+    .phoneFrame2 {
+      top: 0em;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .herobanner {
+    .titleSharedNotes {
+      font-size: 3rem;
+    }
+
+    .textHerobanner {
+      font-size: 1.5rem;
+    }
+    .model {
+      right: -3em;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 350px;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .herobanner {
+    .model {
+      right: -3em;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 300px;
+      width: auto;
+    }
+  }
+}
