@@ -10,7 +10,7 @@
   align-items: center;
   padding: 0 2em;
 
-  .side {
+  .divTitleText {
     flex: 1 1 0;
     min-width: 0; // Important pour éviter le débordement de texte
   }
@@ -57,21 +57,43 @@
     top: 10em;
     right: -4em;
   }
+  .phoneFrameContainer {
+    .phoneScreen1 {
+      position: absolute;
+      top: 1em;
+      right: 22em;
+      height: 550px;
+      width: 270px;
+      border-radius: 20px;
+      object-fit: cover;
+      z-index: 1;
+    }
 
-  .phone1 {
-    position: absolute;
-    top: -4em;
-    right: 10em;
-    height: 650px;
-    width: auto;
-    z-index: 1;
-  }
-
-  .phone2 {
-    position: relative;
-    height: 650px;
-    width: auto;
-    z-index: 2;
+    .phoneScreen2 {
+      position: absolute;
+      top: 3.5em;
+      right: 12em;
+      height: 550px;
+      width: 270px;
+      border-radius: 20px;
+      object-fit: cover;
+      z-index: 3;
+    }
+    .phoneFrame1 {
+      position: absolute;
+      top: -2em;
+      right: 10em;
+      height: 650px;
+      width: auto;
+      z-index: 2;
+    }
+    .phoneFrame2 {
+      position: relative;
+      top: 0em;
+      height: 650px;
+      width: auto;
+      z-index: 4;
+    }
   }
 }
 
@@ -93,13 +115,13 @@
       font-size: 1.3rem;
     }
 
-    .phone1,
-    .phone2 {
+    .phoneFrame1,
+    .phoneFrame2 {
       height: 570px;
       width: auto;
     }
 
-    .phone1 {
+    .phoneFrame1 {
       top: -1em;
       right: 8.5em;
     }
@@ -126,15 +148,19 @@
       right: -3.5em;
     }
 
-    .phone1,
-    .phone2 {
+    .phoneFrame1,
+    .phoneFrame2 {
       height: 550px;
       width: auto;
     }
 
-    .phone1 {
-      top: -3.5em;
+    .phoneFrame1 {
+      top: -4.5em;
       right: 8em;
+    }
+
+    .phoneFrame2 {
+      top: 0em;
     }
   }
 }
@@ -151,18 +177,40 @@
     .button {
       font-size: 1.1rem;
     }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 400px;
+      width: auto;
+    }
+
+    .phoneFrame1 {
+      top: -2.5em;
+      right: 5.5em;
+    }
+    .phoneFrame2 {
+      top: 0em;
+    }
   }
 }
 
 @media (max-width: 660px) {
   .herobanner {
-    .model {
-      right: 0em;
+    .titleSharedNotes {
+      font-size: 3rem;
     }
 
-    .phone1 {
-      //top: 6em;
-      right: 0em;
+    .textHerobanner {
+      font-size: 1.5rem;
+    }
+    .model {
+      right: -3em;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 350px;
+      width: auto;
     }
   }
 }
@@ -170,7 +218,13 @@
 @media (max-width: 480px) {
   .herobanner {
     .model {
-      right: -2em;
+      right: -3em;
+    }
+
+    .phoneFrame1,
+    .phoneFrame2 {
+      height: 300px;
+      width: auto;
     }
   }
 }
