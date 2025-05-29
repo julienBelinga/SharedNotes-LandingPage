@@ -3,6 +3,7 @@
 .introduction {
   display: flex;
   flex-direction: column;
+  padding: 0 0 3em 0;
 
   img {
     margin: 3em 2em 0 12em;
@@ -21,7 +22,7 @@
     margin: 0;
     font-family: $font;
     font-size: $text-size;
-    color: $text-color-light;
+    color: $text-color-medium;
   }
 }
 
@@ -56,7 +57,7 @@
 
 @media (max-width: 660px) {
   .introduction {
-    padding: 23em 0 0 0;
+    padding: 25em 0 0 0;
 
     .title {
       font-size: $title-size-secondary-660px;
@@ -65,11 +66,5 @@
     .text {
       font-size: $text-size-660px;
     }
-  }
-}
-
-@media (max-width: 480px) {
-  .introduction {
-    padding: 30em 0 0 0;
   }
 }

@@ -9,9 +9,10 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+
   .divTitleText {
     flex: 1 1 0;
-    min-width: 0; // Important pour éviter le débordement de texte
+    min-width: 0;
   }
 
   .titleSharedNotes {
@@ -21,6 +22,7 @@
   .textHerobanner {
     padding: 0 3em 1em 0;
     font-size: $text-size;
+    color: $text-color-medium;
   }
 
   .divButtons {
@@ -30,13 +32,12 @@
   }
 
   .button {
-    padding: 30px 40px;
     font-size: 1.5rem;
     border: none;
     border-radius: 12px;
     color: $text-color-light;
     background-color: black;
-    width: 40%;
+    width: 100%;
   }
 
   .button:hover {
@@ -174,6 +175,7 @@
   .herobanner {
     .model {
       right: -20.5em;
+      width: 20vh;
     }
 
     .phoneFrame1 {
