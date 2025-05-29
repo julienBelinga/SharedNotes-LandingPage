@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+.categories {
+  .titleCategories {
+    color: $text-color-light;
+    font-family: $font;
+    font-size: $title-size-secondary;
+    text-align: center;
+  }
+
+  .row {
+    overflow: scroll;
+  }
+}

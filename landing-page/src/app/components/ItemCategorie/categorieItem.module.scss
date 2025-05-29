@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.argument {
+  font-family: $font;
+  font-size: $text-size;
+  color: $text-color-center;
+  background-color: $background-color-argument;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10px;
+}
