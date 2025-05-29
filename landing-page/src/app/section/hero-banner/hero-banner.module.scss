@@ -8,21 +8,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  position: relative;
 
   .divTitleText {
     flex: 1 1 0;
-    min-width: 0; // Important pour éviter le débordement de texte
+    min-width: 0;
   }
 
   .titleSharedNotes {
-    padding: 0.5em 0 0 0;
-    font-size: 5.5rem;
+    font-size: $title-size-primary;
   }
 
   .textHerobanner {
-    padding: 0 0 1em 0;
-    font-size: 3rem;
+    padding: 0 3em 1em 0;
+    font-size: $text-size;
+    color: $text-color-medium;
   }
 
   .divButtons {
@@ -32,13 +32,12 @@
   }
 
   .button {
-    padding: 30px 40px;
     font-size: 1.5rem;
     border: none;
     border-radius: 12px;
     color: $text-color-light;
     background-color: black;
-    width: 40%;
+    width: 100%;
   }
 
   .button:hover {
@@ -53,15 +52,14 @@
     justify-content: flex-end;
     flex: 1 1 0;
     min-width: 0;
-
-    top: 10em;
-    right: -4em;
+    top: 5em;
   }
+
   .phoneFrameContainer {
     .phoneScreen1 {
       position: absolute;
-      top: 1em;
-      right: 22em;
+      top: 14em;
+      right: 12em;
       height: 550px;
       width: 270px;
       border-radius: 20px;
@@ -69,30 +67,13 @@
       z-index: 1;
     }
 
-    .phoneScreen2 {
-      position: absolute;
-      top: 3.5em;
-      right: 12em;
-      height: 550px;
-      width: 270px;
-      border-radius: 20px;
-      object-fit: cover;
-      z-index: 3;
-    }
     .phoneFrame1 {
       position: absolute;
-      top: -2em;
-      right: 10em;
+      top: 11em;
+      right: 0em;
       height: 650px;
       width: auto;
       z-index: 2;
-    }
-    .phoneFrame2 {
-      position: relative;
-      top: 0em;
-      height: 650px;
-      width: auto;
-      z-index: 4;
     }
   }
 }
@@ -102,11 +83,10 @@
     .titleSharedNotes {
       margin-top: 60px;
       padding-top: 1em;
-      font-size: 4.5rem;
+      font-size: $title-size-primary-1300px;
     }
 
     .textHerobanner {
-      padding: 0 3em 1em 0;
       font-size: 2.5rem;
     }
 
@@ -115,15 +95,15 @@
       font-size: 1.3rem;
     }
 
-    .phoneFrame1,
-    .phoneFrame2 {
-      height: 570px;
-      width: auto;
+    .model {
+      right: -3.5em;
     }
 
     .phoneFrame1 {
       top: -1em;
       right: 8.5em;
+      height: 570px;
+      width: auto;
     }
   }
 }
@@ -131,36 +111,19 @@
 @media (max-width: 1050px) {
   .herobanner {
     flex-direction: column;
-    .titleSharedNotes {
-      font-size: 4.5rem;
-    }
-
-    .textHerobanner {
-      font-size: 2.5rem;
-    }
 
     .button {
       width: 100%;
     }
 
     .model {
-      top: 6.5em;
-      right: -3.5em;
-    }
-
-    .phoneFrame1,
-    .phoneFrame2 {
-      height: 550px;
-      width: auto;
+      top: -8em;
+      right: -20.5em;
     }
 
     .phoneFrame1 {
-      top: -4.5em;
-      right: 8em;
-    }
-
-    .phoneFrame2 {
-      top: 0em;
+      height: 550px;
+      width: auto;
     }
   }
 }
@@ -168,28 +131,25 @@
 @media (max-width: 830px) {
   .herobanner {
     .titleSharedNotes {
-      font-size: 4rem;
+      font-size: $title-size-primary-830px;
     }
 
     .textHerobanner {
-      font-size: 2rem;
+      font-size: $text-size-830px;
     }
     .button {
       font-size: 1.1rem;
     }
 
-    .phoneFrame1,
-    .phoneFrame2 {
-      height: 400px;
-      width: auto;
+    .model {
+      right: -20em;
     }
 
     .phoneFrame1 {
       top: -2.5em;
       right: 5.5em;
-    }
-    .phoneFrame2 {
-      top: 0em;
+      height: 400px;
+      width: auto;
     }
   }
 }
@@ -197,18 +157,14 @@
 @media (max-width: 660px) {
   .herobanner {
     .titleSharedNotes {
-      font-size: 3rem;
+      font-size: $title-size-primary-660px;
     }
 
     .textHerobanner {
-      font-size: 1.5rem;
-    }
-    .model {
-      right: -3em;
+      font-size: $text-size-660px;
     }
 
-    .phoneFrame1,
-    .phoneFrame2 {
+    .phoneFrame1 {
       height: 350px;
       width: auto;
     }
@@ -218,11 +174,11 @@
 @media (max-width: 480px) {
   .herobanner {
     .model {
-      right: -3em;
+      right: -20.5em;
+      width: 20vh;
     }
 
-    .phoneFrame1,
-    .phoneFrame2 {
+    .phoneFrame1 {
       height: 300px;
       width: auto;
     }
