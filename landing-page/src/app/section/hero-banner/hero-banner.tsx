@@ -48,20 +48,6 @@ export default function Herobanner() {
             alt="Maquette de téléphone 1"
           />
         </div>
-
-        <div className={styles.phoneFrameContainer}>
-          <Image
-            className={styles.phoneScreen2}
-            src={screenContent2}
-            alt="Contenu de l'écran"
-          />
-
-          <Image
-            className={styles.phoneFrame2}
-            src={phoneFrame2}
-            alt="Maquette de téléphone 2"
-          />
-        </div>
       </div>
     </section>
   );

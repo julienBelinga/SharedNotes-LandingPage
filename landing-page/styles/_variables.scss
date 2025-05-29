@@ -1,18 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-//Background colors
+//BACKGROUND COLORS
 $background-color-bar: #262527;
 $background-color-body: #b097bf;
 
-//hover
+//HOVER
 $hover: #00bc52;
 
-//Font
+//FONT
 $font: "Inter", sans-serif;
 
-//Text color
+//TEXT COLORS
 $text-color-light: #ffffff;
 $text-color-medium: #b097bf;
 $text-color-dark: #262527;
 
-//Font size
+//FONT SIZE
+//primary
+$title-size-primary: 5.5rem;
+$title-size-primary-1300px: 4.5rem;
+$title-size-primary-830px: 4rem;
+$title-size-primary-660px: 3.5rem;
+
+$text-size-primary: 3rem;
+
+//secondary
+$title-size-secondary: 4rem;
+$title-size-secondary-830px: 3.5rem;
+$title-size-secondary-660px: 3rem;
+
+//commun
+$text-size: 2.8rem;
+$text-size-1300px: 2.5rem;
+$text-size-830px: 2rem;
+$text-size-660px: 1.5rem;
