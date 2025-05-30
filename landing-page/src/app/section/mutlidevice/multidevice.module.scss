@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+.title {
+  font-family: $font;
+  font-size: $title-size-secondary;
+  color: $text-color-light;
+  text-align: center;
+}
