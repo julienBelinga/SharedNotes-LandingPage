@@ -7,8 +7,9 @@
     font-size: $title-size-secondary;
     text-align: center;
   }
-
-  .row {
-    overflow: scroll;
+  .scrollRow {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 }

@@ -1,18 +1,43 @@
+"use client";
+
 import styles from "./categories.module.scss";
 import CategorieItem from "@/app/components/ItemCategorie/categorieItem";
-import noteIcon from "assests/prisedenotes.png";
-import docIcon from "assests/dossier.png";
-import commentIcon from "assests/commentaire.png";
-import deviceIcon from "assests/synchronisation.png";
-import fileIcon from "assests/piecesjointes.png";
+import noteIcon from "assets/prisedenotes.png";
+import docIcon from "assets/dossier.png";
+import commentIcon from "assets/commentaire.png";
+import deviceIcon from "assets/synchronisation.png";
+import fileIcon from "assets/piecesjointes.png";
+
+import { useRef, useEffect } from "react";
 
 export default function Categories() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (!scrollRef.current) return;
+      // Empêche le défilement vertical natif
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        scrollRef.current.scrollLeft += e.deltaY;
+      }
+    };
+
+    const scrollRow = scrollRef.current;
+    scrollRow?.addEventListener("wheel", handleWheel, { passive: false });
+
+    return () => {
+      scrollRow?.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   return (
     <section className={styles.categories}>
       <h3 className={styles.titleCategories}>
         Organisez votre vie à plusieurs.
       </h3>
-      <div className={styles.row}>
+
+      <div className={styles.scrollRow} ref={scrollRef}>
         <CategorieItem
           image={noteIcon}
           description=""

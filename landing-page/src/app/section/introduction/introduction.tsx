@@ -1,5 +1,5 @@
 import Image from "next/image";
-import notesDesign from "assests/notes.png";
+import notesDesign from "assets/notes.png";
 import styles from "./introduction.module.scss";
 
 export default function Introduction() {

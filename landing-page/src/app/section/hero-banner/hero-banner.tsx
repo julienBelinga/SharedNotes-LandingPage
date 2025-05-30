@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AppStore from "assests/appstore .png";
-import GooglePlay from "assests/googeplay.png";
-import phoneFrame1 from "assests/phone.png";
-import screenContent1 from "assests/test.jpg";
+import AppStore from "assets/AppStore.png";
+import GooglePlay from "assets/googeplay.png";
+import phoneFrame1 from "assets/phone.png";
+import screenContent1 from "assets/test.jpg";
 import styles from "./hero-banner.module.scss";
 
 export default function Herobanner() {
