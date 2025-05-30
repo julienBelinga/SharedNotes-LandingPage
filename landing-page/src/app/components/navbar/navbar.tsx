@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import logo from "assests/logoTop.png";
+import logo from "assets/logoTop.png";
 import styles from "@/app/components/navbar/navbar.module.scss";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function Navbar() {
   return (
