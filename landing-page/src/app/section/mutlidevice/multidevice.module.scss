@@ -1,8 +1,111 @@
 @use "variables" as *;
 
-.title {
-  font-family: $font;
-  font-size: $title-size-secondary;
-  color: $text-color-light;
-  text-align: center;
+.multidevice {
+  .syncTitle {
+    font-family: $font;
+    font-size: $title-size-secondary;
+    color: $text-color-light;
+    text-align: center;
+  }
+
+  .syncBloc {
+    display: flex;
+    background-color: $background-color-argument;
+    padding: 0.5em 2em;
+    border-radius: 10px;
+
+    .syncIcon {
+      height: 400px;
+      width: auto;
+      padding: 1.5em;
+    }
+
+    .syncText {
+      font-family: $font;
+      font-size: $text-size;
+      color: $text-color-center;
+      align-self: center;
+      padding-left: 5%;
+    }
+  }
+
+  .text {
+    font-family: $font;
+    font-size: $text-size;
+    color: $text-color-medium;
+    margin: 1em;
+  }
+
+  .exempleTitle {
+    font-family: $font;
+    font-size: $title-size-secondary;
+    color: $text-color-light;
+  }
+  .exempleBloc {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 930px) {
+  .multidevice {
+    .syncBloc {
+      .syncIcon {
+        height: 330px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .multidevice {
+    .syncTitle {
+      font-size: $title-size-secondary-830px;
+    }
+
+    .syncBloc {
+      .syncText {
+        font-size: $text-size-830px;
+      }
+
+      .syncIcon {
+        height: 250px;
+        width: auto;
+      }
+    }
+
+    .text {
+      font-size: $text-size-830px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .multidevice {
+    .syncTitle {
+      font-size: $title-size-secondary-660px;
+    }
+
+    .syncBloc {
+      flex-direction: column;
+      padding: 2em;
+      .syncText {
+        text-align: center;
+        padding: 0;
+      }
+
+      .syncIconDiv {
+        align-self: anchor-center;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .multidevice {
+    .exempleBloc {
+      flex-direction: column;
+    }
+  }
 }

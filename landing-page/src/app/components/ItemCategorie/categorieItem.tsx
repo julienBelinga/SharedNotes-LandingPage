@@ -14,7 +14,7 @@ export default function CategorieItem({
 }: CategorieItemProps) {
   return (
     <div className={styles.argument}>
-      <Image src={image} alt={description} width={100} height={100} />
+      <Image src={image} alt={description} />
       <div className={styles.textArgument}>{text}</div>
     </div>
   );

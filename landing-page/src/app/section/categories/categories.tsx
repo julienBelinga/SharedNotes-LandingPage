@@ -16,7 +16,6 @@ export default function Categories() {
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       if (!scrollRef.current) return;
-      // Empêche le défilement vertical natif
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
         scrollRef.current.scrollLeft += e.deltaY;
