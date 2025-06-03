@@ -47,6 +47,23 @@
   }
 }
 
+@media (max-width: 1050px) {
+  .multidevice {
+    .text {
+      text-align: center;
+    }
+
+    .exempleTitle {
+      text-align: center;
+      margin: 1em 0 0.8em 0;
+    }
+    .exempleBloc {
+      flex-direction: column;
+      justify-self: center;
+    }
+  }
+}
+
 @media (max-width: 930px) {
   .multidevice {
     .syncBloc {
@@ -78,6 +95,10 @@
     .text {
       font-size: $text-size-830px;
     }
+
+    .exempleTitle {
+      font-size: $title-size-secondary-830px;
+    }
   }
 }
 
@@ -92,12 +113,21 @@
       padding: 2em;
       .syncText {
         text-align: center;
-        padding: 0;
+        padding: 1em;
+        font-size: $text-size-660px;
       }
 
       .syncIconDiv {
         align-self: anchor-center;
       }
+    }
+
+    .text {
+      font-size: $text-size-660px;
+    }
+
+    .exempleTitle {
+      font-size: $title-size-secondary-660px;
     }
   }
 }
