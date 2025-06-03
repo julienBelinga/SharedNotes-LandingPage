@@ -2,7 +2,7 @@ import Image from "next/image";
 import AppStore from "assets/AppStore.png";
 import GooglePlay from "assets/googeplay.png";
 import phoneFrame1 from "assets/phone2.png";
-import screenContent1 from "assets/test.jpg";
+import screenContent1 from "assets/screenExemple2.jpg";
 import styles from "./hero-banner.module.scss";
 
 export default function Herobanner() {
