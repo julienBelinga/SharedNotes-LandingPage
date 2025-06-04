@@ -42,6 +42,7 @@
     font-family: $font;
     font-size: $text-size;
     color: $text-color-medium;
+    margin-bottom: 1em;
   }
 }
 
@@ -92,6 +93,34 @@
 
     .conclusion {
       font-size: $text-size-660px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-480px;
+      }
+
+      tbody {
+        font-size: $text-size-table-480px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .table {
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-400px;
+      }
+
+      tbody {
+        font-size: $text-size-table-400px;
+      }
     }
   }
 }

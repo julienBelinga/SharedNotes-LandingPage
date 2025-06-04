@@ -38,10 +38,14 @@
     color: $text-color-light;
     background-color: black;
     width: 100%;
-  }
 
-  .button:hover {
-    background-color: $hover;
+    img {
+      height: auto;
+      width: 200px;
+    }
+    &:hover {
+      background-color: $hover;
+    }
   }
 
   .model {
@@ -115,7 +119,7 @@
 
     .model {
       top: -8em;
-      right: -20.5em;
+      right: -18.5em;
     }
   }
 }
@@ -137,6 +141,15 @@
 
 @media (max-width: 660px) {
   .herobanner {
+    align-items: start;
+
+    .button {
+      img {
+        height: auto;
+        width: 180px;
+      }
+    }
+
     .titleSharedNotes {
       font-size: $title-size-primary-660px;
     }
@@ -144,13 +157,39 @@
     .textHerobanner {
       font-size: $text-size-660px;
     }
+
+    .model {
+      right: -35.5em;
+    }
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .herobanner {
+    .button {
+      img {
+        height: auto;
+        width: 130px;
+      }
+    }
+
     .model {
-      right: -18.5em;
+      right: -32em;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .herobanner {
+    .button {
+      img {
+        height: auto;
+        width: 110px;
+      }
+    }
+
+    .model {
+      right: -30em;
     }
   }
 }

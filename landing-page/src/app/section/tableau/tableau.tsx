@@ -10,7 +10,10 @@ export default function Tableau() {
           <thead>
             <tr>
               <th>Fonctionnalité</th>
-              <th>Shared Notes</th>
+              <th>
+                Shared
+                <br /> Notes
+              </th>
               <th>App 1</th>
               <th>App 2</th>
             </tr>

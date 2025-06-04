@@ -19,7 +19,6 @@ export default function Herobanner() {
               className={styles.appstore}
               src={AppStore}
               alt="Logo App Atore"
-              width={200}
             />
           </button>
           <button className={styles.button}>
@@ -27,7 +26,6 @@ export default function Herobanner() {
               className={styles.appstore}
               src={GooglePlay}
               alt="Logo Google Play"
-              width={200}
             />
           </button>
         </div>
