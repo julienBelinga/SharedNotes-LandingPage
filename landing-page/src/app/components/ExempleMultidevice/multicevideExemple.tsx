@@ -1,4 +1,3 @@
-import test from "node:test";
 import styles from "./multideviceExemple.module.scss";
 import Image, { StaticImageData } from "next/image";
 

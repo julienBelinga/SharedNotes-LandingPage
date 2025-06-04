@@ -1,4 +1,3 @@
-import { Table } from "lucide-react";
 import Categories from "./section/categories/categories";
 import Herobanner from "./section/hero-banner/hero-banner";
 import Introduction from "./section/introduction/introduction";
