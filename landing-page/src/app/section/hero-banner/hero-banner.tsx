@@ -11,7 +11,7 @@ export default function Herobanner() {
       <div className={styles.divTitleText}>
         <h1 className={styles.titleSharedNotes}>Shared Notes</h1>
         <div className={styles.textHerobanner}>
-          Partagez vos notes avec d'autre personne.
+          Partagez vos notes avec d&apos;autre personne.
         </div>
         <div className={styles.divButtons}>
           <button className={styles.button}>
