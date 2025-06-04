@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/navbar/navbar";
 import { ReactNode } from "react";
 import "./globals.scss";
+import Footer from "./components/footer/footer";
 
 export const metadata = {
   title: "Shared Notes",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

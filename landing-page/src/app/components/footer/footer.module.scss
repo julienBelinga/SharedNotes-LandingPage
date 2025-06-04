@@ -1,0 +1,16 @@
+@use "variables" as *;
+
+.footer {
+  font-family: $font;
+  color: $text-color-light;
+  background-color: $background-color-bar;
+  padding: 5px 0 15px 0;
+  font-size: $text-size-footer;
+
+  .listDownloads {
+    list-style: none;
+    .listDownloadsTitle {
+      font-weight: bold;
+    }
+  }
+}
