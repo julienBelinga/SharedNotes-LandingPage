@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+.categories {
+  .titleCategories {
+    color: $text-color-light;
+    font-family: $font;
+    font-size: $title-size-secondary;
+    text-align: center;
+  }
+  .scrollRow {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .categories {
+    .titleCategories {
+      font-size: $title-size-secondary-830px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .categories {
+    .titleCategories {
+      font-size: $title-size-secondary-660px;
+      margin-top: 0;
+    }
+
+    .scrollRow {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  }
+}

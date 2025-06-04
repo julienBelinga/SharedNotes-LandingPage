@@ -1,0 +1,195 @@
+@use "variables" as *;
+
+.herobanner {
+  background: $background-color-body;
+  color: $text-color-light;
+  font-family: $font;
+  height: 100dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .divTitleText {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .titleSharedNotes {
+    font-size: $title-size-primary;
+  }
+
+  .textHerobanner {
+    padding: 0 3em 1em 0;
+    font-size: $text-size;
+    color: $text-color-medium;
+  }
+
+  .divButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    color: $text-color-light;
+    background-color: black;
+    width: 100%;
+
+    img {
+      height: auto;
+      width: 200px;
+    }
+    &:hover {
+      background-color: $hover;
+    }
+  }
+
+  .model {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1 0;
+    min-width: 0;
+    top: 5em;
+  }
+
+  .phoneFrameContainer {
+    .phoneScreen1 {
+      position: absolute;
+      top: 14em;
+      transform: translateX(-450px);
+      height: 620px;
+      width: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      z-index: 1;
+      overflow-x: hidden;
+    }
+
+    .phoneFrame1 {
+      position: absolute;
+      top: 13em;
+      right: 8.5em;
+      height: 650px;
+      width: auto;
+      z-index: 2;
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .herobanner {
+    .titleSharedNotes {
+      margin-top: 0;
+      font-size: $title-size-primary-1300px;
+    }
+
+    .textHerobanner {
+      font-size: 2.5rem;
+    }
+
+    .button {
+      padding: 20px 30px;
+      font-size: 1.3rem;
+    }
+
+    .model {
+      right: -3.5em;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .herobanner {
+    flex-direction: column;
+    .titleSharedNotes {
+      margin-top: 100px;
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .model {
+      top: -8em;
+      right: -18.5em;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .herobanner {
+    .titleSharedNotes {
+      font-size: $title-size-primary-830px;
+    }
+
+    .textHerobanner {
+      font-size: $text-size-830px;
+    }
+    .button {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .herobanner {
+    align-items: start;
+
+    .button {
+      img {
+        height: auto;
+        width: 180px;
+      }
+    }
+
+    .titleSharedNotes {
+      font-size: $title-size-primary-660px;
+    }
+
+    .textHerobanner {
+      font-size: $text-size-660px;
+    }
+
+    .model {
+      right: -35.5em;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .herobanner {
+    .button {
+      img {
+        height: auto;
+        width: 130px;
+      }
+    }
+
+    .model {
+      right: -32em;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .herobanner {
+    .button {
+      img {
+        height: auto;
+        width: 110px;
+      }
+    }
+
+    .model {
+      right: -30em;
+    }
+  }
+}

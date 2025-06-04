@@ -1,0 +1,126 @@
+@use "variables" as *;
+
+.table {
+  .tableTitle {
+    font-family: $font;
+    font-size: $title-size-secondary;
+    color: $text-color-light;
+    text-align: center;
+  }
+
+  .tableComparaison {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: $font;
+    margin: 2em 0;
+
+    th,
+    td {
+      border: 3px solid $row-shadow;
+      padding: 0.75rem;
+      text-align: left;
+    }
+
+    thead {
+      background-color: $background-color-table1;
+      color: $row-shadow;
+      font-size: $title-size-table;
+    }
+
+    tbody {
+      background-color: $background-color-table2;
+      color: $text-color-light;
+      font-size: $text-size-table;
+    }
+
+    td {
+      text-align: center;
+    }
+  }
+
+  .conclusion {
+    font-family: $font;
+    font-size: $text-size;
+    color: $text-color-medium;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 1050px) {
+  .table {
+    .conclusion {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .table {
+    .tableTitle {
+      font-size: $title-size-secondary-830px;
+    }
+
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-830px;
+      }
+
+      tbody {
+        font-size: $text-size-table-830px;
+      }
+    }
+
+    .conclusion {
+      font-size: $text-size-830px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .table {
+    .tableTitle {
+      font-size: $title-size-secondary-660px;
+    }
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-660px;
+      }
+
+      tbody {
+        font-size: $text-size-table-660px;
+      }
+    }
+
+    .conclusion {
+      font-size: $text-size-660px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-480px;
+      }
+
+      tbody {
+        font-size: $text-size-table-480px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .table {
+    .tableComparaison {
+      thead {
+        font-size: $title-size-table-400px;
+      }
+
+      tbody {
+        font-size: $text-size-table-400px;
+      }
+    }
+  }
+}
